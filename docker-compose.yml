@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: tmvmfld5!
+    ports:
+      - "8306:3306"
+    volumes:
+      - ./.docker/mysql/data:/var/lib/mysql
